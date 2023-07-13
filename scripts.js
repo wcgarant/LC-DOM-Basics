@@ -16,22 +16,23 @@ function init() {
     /*** STEP 1: CHANGE THE BORDER COLOR ***/
 
     // TODO: Declare objects to gain access to element properties.
+    let box = document.getElementById("box");
     let redButton = document.getElementById("red");
     let yellowButton = document.getElementById("yellow");
     let blueButton = document.getElementById("blue");
 
     // TODO: Create listeners to change color of border to same hex values as buttons.
     // Note: DOM can't access style sheets, so just hard-code the hex codes here for now.
-    document.addEventListener("click", function(event){
-        redButton.style.border = "red"
+    redButton.addEventListener("click", function(event){
+        box.style.borderColor = "red"
     });
 
-    document.addEventListener("click", function(event){
-        yellowButton.style.borderColor = "yellow"
+    yellowButton.addEventListener("click", function(event){
+        box.style.borderColor = "yellow"
     });
 
-    document.addEventListener("mouseover", function(event){
-        blueButton.style.border = "blue"
+    blueButton.addEventListener("click", function(event){
+        box.style.borderColor = "blue"
     });
 
 
@@ -44,15 +45,37 @@ function init() {
     let twelvePix = document.getElementById("12");
 
     // TODO: Create listeners to change thickness of box border.
+    fourPix.addEventListener("click", function (event) {
+        box.style.borderWidth = "4px";
+    });
 
+    eightPix.addEventListener("click", function(event) {
+        box.style.borderWidth = "8px";
+    });
+
+    twelvePix.addEventListener("click", function(event) {
+        box.style.borderWidth = "12px";
+    });
 
 
     /*** STEP 3: CHANGE THE BORDER STYLE ***/
 
     // TODO: Declare objects to gain access to element properties.
- 
+    let dotted = document.getElementById("dotted");
+    let double = document.getElementById("double");
+    let dashed = document.getElementById("dashed");
 
     // TODO: Create listeners to change style of box border.
+    dotted.addEventListener("click", function(event){
+        box.style.borderStyle = "dotted";
+    });
 
+    double.addEventListener("click", function(event){
+        box.style.borderStyle = "double";
+    });
+
+    dashed.addEventListener("click", function(event){
+        box.style.borderStyle = "dashed";
+    });
 
 }
